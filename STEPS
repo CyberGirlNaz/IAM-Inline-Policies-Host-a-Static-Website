@@ -1,0 +1,26 @@
+1) Log into AWS console
+2) Go to IAM
+3) Create user up to the point of set permission
+4) Do not add any permission( we are creating inline policies)
+5) Add tag 
+6) Create the user
+7) Go to the user and click it.
+8) Go to permissions: click on inline policy
+9) get the IAM read only json script from AWS documentation. example: we want the user to have read only access
+10) On the user we created, click on json and paste the script gotten from the documentation
+11) Click on review policy,name it and create policy
+
+** Host static website**
+1) Get source code for a static website from open source
+2) Go to the S3 section of AWS console
+3) Click on create bucket
+4) Name the bucket, if you want other people to access it,make it public if not uncheck it
+5) Ensure to enable encrytion
+6) Create the bucket and click on it to open.
+7) click on upload and add the source code
+8) after successful upload, click on properties
+9) click on edit under static website hosting
+10) go to permission and add bucket policy (https://docs.aws.amazon.com/AmazonS3/latest/userguide/example-bucket-policies.html#example-bucket-policies-use-case-2)
+11) rename the default bucket to your bucket name
+12) save changes
+13) go to host static bucket and pick up the link, your website is live
